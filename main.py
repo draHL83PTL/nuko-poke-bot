@@ -1,3 +1,4 @@
+import os
 from typing import Dict
 import discord
 from intents import nuko_bot_intents
@@ -50,4 +51,5 @@ def create_embed_help(command, description, args:Dict, example):
     embed.add_field(name="--使用例--",value=example, inline=False)
     return embed
 
-client.run("MTAzMDkyNDUxODQ1OTQ0MTI0Mg.GHgYLX.QsBXw2c7_6b8IYyjlqR2k0OedQ02l2NETdseNc")
+token = os.environ["token"]
+client.run(token)
